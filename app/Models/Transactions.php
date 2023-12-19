@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Transactions extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+
+    protected $table = 'transactions';
+
+    protected $fillable = [
+        'package_id',
+        'user_id',
+        'amount',
+        'transcation_code',
+        'status',
+    ];
 }
